@@ -187,7 +187,6 @@ func (queueSurveyor *QueueSurveyor) purge() (int, error) {
 			}
 
 			counter++
-			fmt.Printf("checksum %s pushed back\n", item.checksum)
 		}
 	}
 	return counter, nil
