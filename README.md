@@ -1,4 +1,4 @@
-# queuesurveyor - redis retry library written in golang
+# queuesurveyor - a Go library that surveys your redis lists
 
 In casees where redis lists are used as a queue, this library adds
 retry functionlity.
