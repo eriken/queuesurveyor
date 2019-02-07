@@ -8,16 +8,6 @@ import (
 	"github.com/eriken/queuesurveyor/redis"
 )
 
-/*
-	entries that fail need to be retried;
-	the logic here is to fetch all the current processed entries in
-	JPAPI_GEOADDRESS_ALBUM_CHECK_IN_PROGRESS every process_list_clean_interval
-	minutes. Then, every process_list_clean_interval minutes
-	check if the entry is more than PROCESS_LIST_RETRY_TRESHHOLD minutes old.
-	If so check if it still is in JPAPI_GEOADDRESS_ALBUM_CHECK_IN_PROGRESS, if not
-	delete it, else put it back into the list it came from.
-*/
-
 var (
 	redisClient redis.Redis
 )
