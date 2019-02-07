@@ -1,4 +1,4 @@
-# queuesurveyor
+# queuesurveyor - redis retry library written in golang
 
 In casees where redis lists are used as a queue, this library adds
 retry functionlity.
@@ -12,3 +12,5 @@ popped from, refered to as the "current" list.
 
 The library holds no state on each record so amount of retries
 are indefinite.
+
+The library wraps github.com/go-redis/redis
